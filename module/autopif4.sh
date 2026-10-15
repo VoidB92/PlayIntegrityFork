@@ -128,7 +128,7 @@ if [ -z "$ID" -o -z "$INCREMENTAL" ] && [ "$FORCE_MATCH" ]; then
   echo "$MODEL ($PRODUCT)";
   get_canary_info;
 fi;
-[ -z "$ID" -o -z "$INCREMNTAL" ] && die "Failed to extract build info from JSON";
+[ -z "$ID" -o -z "$INCREMENTAL" ] && die "Failed to extract build info from JSON";
 echo "Android $(grep 'releaseTrackVersionName' PIXEL_CANARY_JSON | cut -d\" -f4)";
 
 FI="$(grep 'factoryImageDownloadUrl' PIXEL_CANARY_JSON | cut -d\" -f4)";
